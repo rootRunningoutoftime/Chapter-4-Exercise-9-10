@@ -1,0 +1,83 @@
+
+        #include <iostream>
+        #include <string.h>    
+        #include<assert.h>
+        #include<vector>
+        #include<chrono>
+        #include<thread>
+        using namespace std;	
+          int main()
+          {
+
+            char x, r, p, s;
+            bool keep_going = true;
+            //using namespace std::literals::chrono_literals;
+            // Something here is wrong with the using namespace std;
+            /*:auto start = std::chrono::high_resolution_clock::now();
+
+            std::this_thread::sleep_for(is);
+            auto end = std::chrono::high_resolution_clock::now();
+
+            std::chrono::duration <float> duraction = end - start;
+            std::cout << duration.count() << " s" << std::endl;
+              std::cin.get();*/
+            cout << "would you like to play rock paper scissor shot game, if yes insert y if no insert n ? )" << endl;
+            cin >> x;
+            if (x == 'y') {
+              //while (keep_going) {
+                //string  rock, paper, scissor, response;
+                string response;
+                string rock = "rock";
+                string paper = "paper";
+                string scissor = " scissor";
+                vector<string> the_next_value = { rock,paper,scissor };
+                for (int i = 0; i < the_next_value.size(); ++i) {
+                  //the_next_value[i] = response;
+                  response = the_next_value[i];
+
+                  cout << "okay, so lets play you ready... rock..paper..scissor..SHOT!!!(below type your choice between  r for rock, p for  paper or s for scissors)" << endl;
+                  cin >> x;
+                  switch (x) {
+
+                  case 'r':
+                    cout << "I got" << response << ", mf!!!" << endl;
+                    if (response == "rock")
+                      cout << " damn we even" << endl;
+                    if (response == "paper")
+                      cout << " i lose " << endl;
+                    else
+                      cout << " you got me" << endl;
+
+                    break;
+
+                  case 'p':
+                    cout << "I got" << response << "mf!!!" << endl;
+                    if (response == "rock")
+                      cout << " got you me " << endl;
+                    if ( response == "paper")
+                      cout << " we even, so far " << endl;
+                            else
+                              cout << " ill cut that im sorry lls " << endl;
+                    break;
+
+                  case 's':
+                    cout << "I got" << response << " mf!!!" << endl;
+                    if (response == "rock")
+                      cout << " you lose  me " << endl;
+                    if (response == "paper")
+                      cout << " you win " << endl;
+                    else
+                      cout << " ill cut that im sorry lls " << endl;
+                    break;
+                  default:
+                    cout << " ayo, we not having none of that" << endl;
+                  }// switch statement 
+                }// For loop
+              }// while loop 
+            }// if statement 
+            else {
+              cout << "well bye then" << endl;
+            }
+
+            return 0;
+          }
